@@ -1,70 +1,52 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accounting Games 導覽</title>
-  <style>
+<style>
+  body {
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background: url("./images/七個選項的底圖.PNG") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  h1 {
+    color: #2c3e50;
+    font-size: 3rem; /* 放大標題字體 */
+    margin-bottom: 2rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    max-width: 500px; /* 稍微放大區塊 */
+    margin: 0 auto;
+  }
+  li {
+    margin: 1.2rem 0;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 1rem 2rem; /* 放大按鈕區域 */
+    border-radius: 12px;
+    font-size: 1.5rem;  /* 放大按鈕字體 */
+    transition: background-color 0.3s ease;
+  }
+  a:hover {
+    background-color: #2980b9;
+  }
+  @media (max-width: 600px) {
     body {
-      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-      background: url("./images/七個選項的底圖.PNG") no-repeat center center fixed;
-      background-size: cover; /* 讓圖片自動縮放填滿畫面 */
-      color: #333;
-      text-align: center;
-      margin: 0;
-      padding: 2rem;
+      padding: 1rem;
     }
     h1 {
-      color: #2c3e50;
       font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    li {
-      margin: 0.8rem 0;
     }
     a {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      background-color: #3498db;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.2rem; /* 手機上適中大小 */
+      padding: 0.8rem 1.5rem;
     }
-    a:hover {
-      background-color: #2980b9;
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      a {
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>歡迎來到會計項目小遊戲！</h1>
-  <ul>
-    <li><a href="./game1/" target="_blank" rel="noopener">費損</a></li>
-    <li><a href="./game2/" target="_blank" rel="noopener">資產</a></li>
-    <li><a href="./game3/" target="_blank" rel="noopener">收益</a></li>
-    <li><a href="./game4/" target="_blank" rel="noopener">負債</a></li>
-    <li><a href="./game5/" target="_blank" rel="noopener">流動資產</a></li>
-    <li><a href="./game6/" target="_blank" rel="noopener">非流動資產</a></li>
-    <li><a href="./game7/" target="_blank" rel="noopener">營業費用</a></li>
-  </ul>
-</body>
-</html>
-
+  }
+</style>
