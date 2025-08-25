@@ -10,7 +10,7 @@
   }
   h1 {
     color: #2c3e50;
-    font-size: 20px; /* 標題字體固定為20號字 */
+    font-size: 20px; /* 固定20號字 */
     margin-bottom: 2rem;
   }
   ul {
@@ -20,33 +20,34 @@
     margin: 0 auto;
   }
   li {
-    margin: 1.2rem 0;
+    margin: 1.5rem 0;
   }
   a {
     display: inline-block;
     text-decoration: none;
     color: white;
     background-color: #3498db;
-    padding: 0.8rem 1.5rem; 
-    border-radius: 10px;
-    font-size: 20px;  /* 按鈕字體固定為20號字 */
-    transition: background-color 0.3s ease;
+    font-size: 20px;   /* 固定字體大小 */
+    padding: 0.8em 2em; /* 用 em，隨字體比例放大按鈕 */
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   a:hover {
     background-color: #2980b9;
+    transform: scale(1.05); /* hover 時放大 */
   }
   @media (max-width: 600px) {
     body {
       padding: 1rem;
     }
     h1 {
-      font-size: 20px; /* 手機維持20號字 */
+      font-size: 20px; /* 手機也固定20號字 */
     }
     a {
       width: 100%;
       box-sizing: border-box;
-      font-size: 20px; /* 手機維持20號字 */
-      padding: 0.8rem 1.2rem;
+      font-size: 20px; /* 手機字體固定20號字 */
+      padding: 1em 2em; /* 按鈕仍然等比例 */
     }
   }
 </style>
