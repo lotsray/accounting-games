@@ -1,53 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Accounting Games 導覽</title>
 <style>
+  * { box-sizing: border-box; }
   body {
+    position: relative; /* 為遮罩定位 */
     font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;  /* 內容置中 */
+    color: #333;
     background: url("./images/七個選項的底圖.PNG") no-repeat center center fixed;
     background-size: cover;
-    color: #333;
+  }
+  /* 半透明遮罩，避免背景太亮把按鈕吃掉 */
+  body::before{
+    content:"";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,.25); /* 需要更亮/更暗可調整 0.25 */
+    z-index: 0;
+  }
+
+  /* 主要內容卡片 */
+  .wrap{
+    position: relative; z-index: 1;
+    width: min(720px, 92vw);
+    background: rgba(255,255,255,.9);
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
     text-align: center;
-    margin: 0;
-    padding: 2rem;
   }
-  h1 {
+
+  h1{
+    margin: 0 0 1.5rem;
     color: #2c3e50;
-    font-size: 20px; /* 固定20號字 */
-    margin-bottom: 2rem;
+    font-size: 20px;           /* 固定 20px */
+    line-height: 1.4;
   }
-  ul {
+
+  ul{
     list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 0; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 520px;
   }
-  li {
-    margin: 1.5rem 0;
-  }
-  a {
+
+  a{
     display: inline-block;
     text-decoration: none;
-    color: white;
+    color: #fff;
     background-color: #3498db;
-    font-size: 20px;   /* 固定字體大小 */
-    padding: 0.8em 2em; /* 用 em，隨字體比例放大按鈕 */
+    font-size: 20px;           /* 固定 20px */
+    padding: 0.9em 1.6em;      /* 用 em 讓按鈕隨字體等比例 */
     border-radius: 12px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-height: 3em;           /* 最小高度，保持一致外觀 */
+    min-width: 12em;           /* 最小寬度 */
+    box-shadow: 0 4px 12px rgba(0,0,0,.18);
+    transition: transform .15s ease, background-color .25s ease, box-shadow .25s ease;
   }
-  a:hover {
+  a:hover{
     background-color: #2980b9;
-    transform: scale(1.05); /* hover 時放大 */
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.24);
   }
-  @media (max-width: 600px) {
-    body {
-      padding: 1rem;
-    }
-    h1 {
-      font-size: 20px; /* 手機也固定20號字 */
-    }
-    a {
-      width: 100%;
-      box-sizing: border-box;
-      font-size: 20px; /* 手機字體固定20號字 */
-      padding: 1em 2em; /* 按鈕仍然等比例 */
-    }
+
+  @media (max-width: 600px){
+    .wrap{ padding: 1.25rem; }
+    ul{ gap: 0.75rem; }
+    a{ width: 100%; min-width: 0; } /* 手機滿版更好點 */
   }
 </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>歡迎來到會計項目小遊戲！</h1>
+    <ul>
+      <li><a href="./game1/" target="_blank" rel="noopener">費損</a></li>
+      <li><a href="./game2/" target="_blank" rel="noopener">資產</a></li>
+      <li><a href="./game3/" target="_blank" rel="noopener">收益</a></li>
+      <li><a href="./game4/" target="_blank" rel="noopener">負債</a></li>
+      <li><a href="./game5/" target="_blank" rel="noopener">流動資產</a></li>
+      <li><a href="./game6/" target="_blank" rel="noopener">非流動資產</a></li>
+      <li><a href="./game7/" target="_blank" rel="noopener">營業費用</a></li>
+    </ul>
+  </main>
+</body>
+</html>
