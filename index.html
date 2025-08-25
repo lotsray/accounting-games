@@ -16,11 +16,16 @@
     background-size: cover;
   }
 
-  h1{
-    margin-bottom: 2rem;
-    font-size: 20px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,.6); /* 避免文字被背景吃掉 */
-  }
+  h1 {
+  margin-bottom: 2rem;
+  font-size: 20px;
+  color: #ffffff;                     /* 白字 */
+  background: rgba(0, 0, 0, 0.5);     /* 半透明黑底 */
+  padding: 0.6rem 1.2rem;             /* 內距，讓背景有空間 */
+  border-radius: 8px;                 /* 圓角 */
+  display: inline-block;              /* 讓底色只包住文字 */
+}
+
 
   ul{
     list-style: none;
@@ -69,3 +74,4 @@
   </main>
 </body>
 </html>
+
